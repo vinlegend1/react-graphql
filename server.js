@@ -1,7 +1,11 @@
+// import dependencies
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
-
+const cors = require('cors');
 const app = express();
+
+// Use middlewares
+app.use(cors())
 
 const schema = require('./schema');
 
